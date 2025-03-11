@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Alert System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input,
+        button {
+            margin: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #weather-result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Weather Alert System</h1>
+
+    <div>
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" placeholder="e.g. Bhubaneswar">
+        <button onclick="getWeather()">Check Weather</button>
+        <button onclick="getCurrentLocationWeather()">Get Current Location</button>
+    </div>
+
+    <div id="weather-result"></div>
+
+    <script>
+        async function getWeather(city = null, lat = null, lon = null) {
+            let url = "";
+            if (city) {
+                url = `http://localhost:5000/weather?city=${city}`;
+            } else if (lat && lon) {
+                url = `http://localhost:5000/weather?lat=${lat}&lon=${lon}`;
+            } else {
+                alert("Invalid request");
+                return;
+            }
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById("weather-result").innerHTML = `<p style="color:red;">${data.error}</p>`;
+                } else {
+                    document.getElementById("weather-result").innerHTML = `
+                        <p><strong>City:</strong> ${data.city}</p>
+                        <p><strong>Temperature:</strong> ${data.temperature}°C</p>
+                        <p><strong>Condition:</strong> ${data.condition}</p>
+                    `;
+                }
+            } catch (error) {
+                console.error("Error fetching weather:", error);
+                document.getElementById("weather-result").innerHTML = `<p style="color:red;">Error fetching weather data</p>`;
+            }
+        }
+
+        function getCurrentLocationWeather() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    getWeather(null, lat, lon);
+                }, error => {
+                    alert("Location access denied. Please enter a city manually.");
+                });
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
