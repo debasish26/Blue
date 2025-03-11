@@ -36,7 +36,6 @@ Coming Soon...
 Blue/
 │-- Frontend/   # React-based frontend
 │-- Backend/    # Express.js-based backend
-│-- .env (to be configured)
 ```
 
 ## 🛠️ Prerequisites
