@@ -2,6 +2,21 @@
 
 ![image](https://github.com/user-attachments/assets/82f60f51-c025-484a-8e43-89dd71929fed)
 
+## 📖 Table of Contents
+- [🌟 Introduction](#-introduction)
+- [🚀 Features](#-features)
+- [📸 Screenshots / Demo](#-screenshots--demo)
+- [📂 Folder Structure](#-folder-structure)
+- [🛠️ Prerequisites](#️-prerequisites)
+- [🔥 Installation Guide](#-installation-guide)
+  - [1️⃣ Clone the Required Repositories](#1%EF%B8%8F%E2%83%A3-clone-the-required-repositories)
+  - [2️⃣ Set Up Blue-AI_Integration](#2%EF%B8%8F%E2%83%A3-set-up-blue-ai_integration)
+  - [3️⃣ Set Up Blue-AI-MODEL](#3%EF%B8%8F%E2%83%A3-set-up-blue-ai-model)
+  - [4️⃣ Backend Setup](#4%EF%B8%8F%E2%83%A3-backend-setup)
+  - [5️⃣ Frontend Setup](#5%EF%B8%8F%E2%83%A3-frontend-setup)
+- [⚙️ Environment Variables](#%EF%B8%8F-environment-variables)
+- [👥 Contributing](#-contributing)
+- [📝 License](#-license)
 
 ## 🌟 Introduction
 **Blue** is a real-time weather alert system designed to provide instant notifications about critical weather conditions. It integrates with multiple APIs to deliver accurate forecasts and warnings, ensuring users stay informed about upcoming weather events.
@@ -23,9 +38,7 @@
 
 ![image](https://github.com/user-attachments/assets/11445eac-62b2-4e8f-9faf-563b84ef53ea)
 
-
 ![image](https://github.com/user-attachments/assets/c086b1ee-c8e2-45e5-852c-f51e2d4fe27b)
-
 
 ### 🎥 Demo Video
 ```
@@ -48,8 +61,6 @@ Before setting up **Blue**, ensure you have the following installed:
 - [Git](https://git-scm.com/)
 
 ## 🔥 Installation Guide
-Follow these steps to set up **Blue** on your local machine.
-
 ### 1️⃣ Clone the Required Repositories
 ```sh
 git clone https://github.com/debasish26/Blue-AI_Integration
