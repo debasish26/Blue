@@ -1,6 +1,7 @@
 # Blue - Real-Time Weather Alert System
 
-![Blue Banner](https://via.placeholder.com/1200x400?text=Blue+Weather+Alert+System)
+![image](https://github.com/user-attachments/assets/82f60f51-c025-484a-8e43-89dd71929fed)
+
 
 ## 🌟 Introduction
 **Blue** is a real-time weather alert system designed to provide instant notifications about critical weather conditions. It integrates with multiple APIs to deliver accurate forecasts and warnings, ensuring users stay informed about upcoming weather events.
