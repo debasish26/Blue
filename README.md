@@ -106,12 +106,6 @@ OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
 REACT_APP_WEATHER_API_KEY=your_weather_api_key
 REACT_APP_WEATHERBIT_API_KEY=your_weatherbit_api_key
 ```
-
-## 🎯 Usage
-Once all services are running, access the application at:
-```
-http://localhost:5173
-```
 Login or sign up to start receiving weather alerts!
 
 ## 👥 Contributing
